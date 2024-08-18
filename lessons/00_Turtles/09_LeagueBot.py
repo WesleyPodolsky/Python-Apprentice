@@ -18,3 +18,8 @@ screen.bgcolor('white')
 t = turtle.Turtle()
 
 ... # Your Code Here
+
+def set_turtle_image(turtle, image_name):
+    print('skib')
+
+set_turtle_image(t, "boy_yellow.gif")
