@@ -6,7 +6,7 @@ Color Lines
 """
 
 import turtle                           # Tell Python we want to work with the turtle
-turtle.setup (width=600, height=600)    # Set the size of the window
+turtle.setup(width=600, height=600)    # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
 
@@ -16,12 +16,17 @@ tina.speed(2)                           # Make the turtle move as fast, but not 
 
 colors = [ 'red', 'blue', 'black', 'orange']    # define a list of colors
 
-for color in colors:                            # loop through the colors
-    ... # Your code here
+for color in colors[::-1]:   
+    tina.color(color)
+    tina.forward(50)
+    tina.right(90)
+                             # loop through the colors
+# Your code here
+
 
 
 # 2) Make another square, but put the colors in reverse order, using a negative index. 
 
-... # Your code here
+ # Your code here
 
 tina.done()
