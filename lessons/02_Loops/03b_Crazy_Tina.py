@@ -37,5 +37,5 @@ for  i in range(8):
     tina.forward(forward)
     tina.left(left)
 
-turtle.exitonclick()  
+turtle.exitonlick()  
 

@@ -32,6 +32,8 @@ at the bottom of the editor screen; this program does not use the GUI.
 
 import random
 
+varDos = random.randint(0,1000000)
+
 def ask_integer(prompt):
     """Function to ask the user for an integer"""
     while True:
@@ -39,9 +41,19 @@ def ask_integer(prompt):
             return int(input(prompt))
         except ValueError:
             print("Please enter a valid number!")
+            
 
 
 # Pick the random number
+while True:
+    varUno = ask_integer('Write number 1-1M here:')
+    if varUno > varDos:
+        print('lower!!!!1 OMG LOSERRRRRt poopy!!!22222')
+    if varUno < varDos:
+        print('HIGHER HIGHER GOGOGOG U GOT HIS')
+    if varUno == varDos:
+        print('OMG YOU GOT IT UR WITTAWY THE FALLEN SIGMA')
+        break
 
 # In your loop:
 
