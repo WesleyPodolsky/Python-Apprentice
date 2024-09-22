@@ -15,7 +15,7 @@ def check_row(l):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
-
+    print(l)
     return None
 
 def check_win(board):
@@ -102,6 +102,15 @@ class TicTacToe:
         elif self.turn_n == 9:
             self.message.value = "It's a draw!"
             info("Tic-tac-toe","It's a draw!")
+        check_row(self.buttons[0][0:3])
+        # for x in self.buttons:
+        #     print(self.buttons[x])
+        #     for y in self.buttons[x]:
+        #         print(self.buttons.index(y))
+        for x in self.buttons:
+            print(self.buttons[x])
+            for y in self.buttons[x]:
+                print(self.buttons.index(y))
 
 ttt = TicTacToe(check_win)
 ttt.start()
