@@ -1,8 +1,8 @@
 #imports
 from guizero import App, Box, PushButton, Text, info
 
-X_MARK = "X"
-O_MARK = "O"
+X_MARK = "🧀 "
+O_MARK = "Cracker"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
@@ -15,7 +15,74 @@ def check_row(l):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
-    print(l)
+## col
+    if l[0][0] == X_MARK and l[0][1] == X_MARK and l[0][2] == X_MARK:
+        print('sigma')
+        info("Tic-tac-toe","🧀  Wins!")
+
+    if l[1][0] == X_MARK and l[1][1] == X_MARK and l[1][2] == X_MARK:
+        print('sigma')
+        info("Tic-tac-toe","🧀  Wins!")
+
+    if l[2][0] == X_MARK and l[2][1] == X_MARK and l[2][2] == X_MARK:
+        print('sigma')
+        info("Tic-tac-toe","🧀  Wins!")
+## rows
+    if l[0][0] == X_MARK and l[1][0] == X_MARK and l[2][0] == X_MARK:
+        print('sigma')
+        info("Tic-tac-toe","🧀  Wins!")
+
+    if l[0][1] == X_MARK and l[1][1] == X_MARK and l[2][1] == X_MARK:
+        print('sigma')
+        info("Tic-tac-toe","🧀  Wins!")
+
+    if l[0][2] == X_MARK and l[1][2] == X_MARK and l[2][2] == X_MARK:
+        print('sigma')
+        info("Tic-tac-toe","🧀  Wins!")
+## diagnal
+    if l[0][0] == X_MARK and l[1][1] == X_MARK and l[2][2] == X_MARK:
+        print('sigma')
+        info("Tic-tac-toe","🧀  Wins!")
+
+    if l[2][0] == X_MARK and l[1][1] == X_MARK and l[0][2] == X_MARK:
+        print('sigma')
+        info("Tic-tac-toe","🧀  Wins!")
+################################### CRACKER WINS BELOW CHEESE WINS ABOVe ######
+## col
+    if l[0][0] == O_MARK and l[0][1] == O_MARK and l[0][2] == O_MARK:
+        print('sigma')
+        info("Tic-tac-toe","Cracker  Wins!")
+
+    if l[1][0] == O_MARK and l[1][1] == O_MARK and l[1][2] == O_MARK:
+        print('sigma')
+        info("Tic-tac-toe","Cracker  Wins!")
+
+    if l[2][0] == O_MARK and l[2][1] == O_MARK and l[2][2] == O_MARK:
+        print('sigma')
+        info("Tic-tac-toe","Cracker  Wins!")
+## rows
+    if l[0][0] == O_MARK and l[1][0] == O_MARK and l[2][0] == O_MARK:
+        print('sigma')
+        info("Tic-tac-toe","Cracker  Wins!")
+
+    if l[0][1] == O_MARK and l[1][1] == O_MARK and l[2][1] == O_MARK:
+        print('sigma')
+        info("Tic-tac-toe","Cracker  Wins!")
+
+    if l[0][2] == O_MARK and l[1][2] == O_MARK and l[2][2] == O_MARK:
+        print('sigma')
+        info("Tic-tac-toe","Cracker  Wins!")
+## diagnal
+    if l[0][0] == O_MARK and l[1][1] == O_MARK and l[2][2] == O_MARK:
+        print('sigma')
+        info("Tic-tac-toe","Cracker  Wins!")
+
+    if l[2][0] == O_MARK and l[1][1] == O_MARK and l[0][2] == O_MARK:
+        print('sigma')
+        info("Tic-tac-toe","Cracker  Wins!")
+
+
+    # print(l)
     return None
 
 def check_win(board):
@@ -44,7 +111,7 @@ class TicTacToe:
     turn_n = 0
     turn = X_MARK
 
-    def __init__(self, win_func=check_win):
+    def __init__(self, win_func=check_row):
         self.board = None # The stoage for user's markers
         
         self.app = App('Tic Tac Toe Game', bg='burlywood')
@@ -112,5 +179,5 @@ class TicTacToe:
             for y in self.buttons[x]:
                 print(self.buttons.index(y))
 
-ttt = TicTacToe(check_win)
+ttt = TicTacToe(check_row)
 ttt.start()
