@@ -19,15 +19,21 @@ def drawSquare():
 def drawTriangle():
     for i in range(3):
         t.forward(13)
-        t.left(60)
+        t.left(120)
 
 def drawCircle():
         t.circle(8)
 
 shape = simpledialog.askstring(title='1/3', prompt='shape?')
 if shape == 'square':
+     drawSquare()
+if shape == 'triangle':
+     drawTriangle()
+if shape == 'circle':
+     drawCircle()
      
 #   3. Ask the user for the for a shape to draw
 #   4. Draw the appropriate shape depending on their answer (call the right
 #      function)
 pass
+turtle.done()
