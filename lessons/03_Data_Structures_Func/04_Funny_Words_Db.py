@@ -96,12 +96,13 @@ def update_listbox(db):
 
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
-    
-    l = [
-        
-    ]
+    l = []
+
     for key, value in db.items():
-        print('yes')     
+        l.append(
+                 str(key) + ":" + str(value)
+                 )
+  
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
     # strings, then add the strings to the list with .append()
@@ -144,6 +145,7 @@ def _delete_definition():
         if word in db:
             del db[word]
             _update_listbox(db)
+            print('3')
 
 # Main app
 app = App(title="Funny Definitions", width=600, height=300)
